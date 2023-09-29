@@ -1,0 +1,1589 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F9D9A8, #DFFAC4);    background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+p{
+  font-size: 18px;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #ffffff;
+  text-shadow:   0px 0px 1px #000000;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  text-shadow:   0px 0px 10px #000000, 0px 0px 11px #000000, 0px 0px 12px #000000;
+}
+
+::selection {
+  color: #70DCA9;
+  background: rgba(0, 0, 0, 0);
+}
+/* Navbar */
+nav {
+  height: 80px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 2;
+}
+
+
+
+.logoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.logoDiv img {
+  width: 60px;
+  height: 60px;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  margin: auto 16px;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  transition: 300ms;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navLinks a:hover {
+  color: #55D39A;
+  text-shadow: 0 2px 10px #55D39A;
+}
+
+.navLinks a:active {
+  color: #000000;
+  text-shadow: 0 2px 10px #55D39A;
+}
+
+.navActive {
+  border-bottom: 1px solid #44ffab;
+  text-shadow: 0 0px 10px #44ffab;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropbtn {
+  margin: auto 16px;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  min-width: 160px;
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the link */
+  left: 0; /* Align the dropdown with the left edge of the link */
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #55D39A;
+}
+
+.dropdown:hover .dropbtn {
+  color: #55D39A;
+  text-shadow: 0 2px 10px #55D39A;
+  border-bottom: 1px solid #44ffab;
+  text-shadow: 0 0px 10px #44ffab;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; 
+}
+
+
+
+.infoSection{
+  padding: 30px;
+}
+
+.intro{
+  margin: 30px;
+}
+.intro h1{
+  margin-bottom: 20px;
+}
+.intro p{
+  color: #333D29;
+  font-size: 20px;
+  margin: 40px;
+}
+
+
+/*HOME***********************************************************************/
+
+.homeSection{
+  background-image: url("images/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.5s ease;
+}
+
+.homeSection nav{
+  background: linear-gradient(90deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), #00000092);
+  transition: background-color 0.5s ease;
+}
+
+.homeSection nav.scrolled {
+  background-color: hsla(0, 0%, 0%, 0.95); /* Change to the desired black color */
+  transition: background-color 1.5s ease; /* Add a transition for smooth color change */
+}
+
+.homeSection h1{
+  text-align: center;
+margin-top: 300px;
+  font-size: 40px;
+}
+
+.resvForm{
+  background: linear-gradient(rgba(115, 115, 115, 0.3), rgba(120, 120, 120, 0.3));
+  padding: 20px;
+  margin: 0 20%;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around; 
+  border-radius: 10px;
+  transition: 0.5s ease all;
+
+}
+
+.resvForm:hover{
+  background: linear-gradient(rgba(115, 115, 115, 0.5), rgba(120, 120, 120, 0.5));
+  
+  transform: scale(1.01);
+}
+.resvDate{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background: linear-gradient(45deg, hsla(82, 20%, 62%, 0.8), hsla(52, 94%, 94%, 0.8));
+}
+.resvDate label{
+  text-shadow:  0 0 3px rgb(255, 255, 255);
+}
+
+.resvForm input{
+  width: 100%;
+  background: linear-gradient(45deg, #a3b18a, #fefae0);
+  padding: 15px;
+  font-size: 24px;
+  font-family: 'Alegreya Sans', sans-serif;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+
+.resvForm input.resvQty:nth-child(3),
+.resvForm input.resvQty:nth-child(4) {
+  width: 13%;
+
+}
+
+
+.resvForm input:hover{
+  border-radius: 5px;
+  background: linear-gradient(45deg, #c4d5a6, #fcf5c7);
+  box-shadow: 0 0 10px black, 0 5px 10px black;
+
+}
+::placeholder{
+  color: #000;
+}
+
+.resvForm button{
+  padding: 0 24px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #a3b18a, #fefae0);
+  transition: 0.3s;
+}
+.resvForm button:hover{
+  border-radius: 50%;
+  transform: scale(1.2);
+  background: linear-gradient(45deg, #89a951, #cfbc42);
+  box-shadow: 0 0 10px rgb(255, 255, 255), 0 0px 10px rgb(255, 255, 255),0 0px 20px rgb(132, 255, 71),0 0px 50px rgb(149, 255, 96);
+
+}
+
+.homeSection p{
+  text-align: center;
+}
+
+.homeCard{
+  background-color: #170f0700;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.homeCard p{
+  color: #032116;
+}
+
+.homeCard .mySlides {
+  display: none;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 500px;
+  border: 4px solid #a6835e;
+  border-radius: 10px;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  max-height: 500px;
+  position: relative;
+}
+ 
+.dot {
+  height: 4px;
+  width: 24px;
+  margin: 0 2px;
+  background-color: #000000;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+/*INFO***********************************************************************/
+
+.infoCard{
+  display: flex;
+  height: 250px;
+  margin: 30px;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: -10px 10px 20px black;
+}
+.infoCard1{
+  background-color: hsl(35, 27%, 52%);
+}
+
+.infoCard2{
+  background-color: #B6AD90;
+}
+
+.infoCard3{
+  background-color: #C2C5AA;
+}
+
+.infoCard4{
+  background-color: #A4AC86;
+}
+
+.infoCard img{
+  width: 20%;
+  border-radius: 20px 0 0 20px;
+  transition: 0.5s;
+}
+
+.infoCard img:hover{
+  transform: scale(1.5) translate(50px,-30px);
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: 0 0 10px black;
+}
+
+.infoCardContent{
+  width: 70%;
+  padding: 20px;
+  background-color: #e3932b00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoCardContent h2{
+  margin-bottom: 10px;
+}
+
+.infoCardContent p{
+  color: #333D29;
+}
+
+.btn-info{
+  background: linear-gradient(135deg, rgba(198, 219, 174, 0.9), rgba(253, 215, 91, 0.9));
+  padding: 10px 100px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-info:hover{
+  background: linear-gradient(135deg, #c8e3a9, #fbd149);
+  box-shadow: 2px 2px 10px #000000;
+}
+
+
+/*REVIEW*********************************************************************/
+
+.reviewSection{
+  padding: 30px;
+}
+.reviewCardContainer{
+  display: flex;
+  width: 80%;
+  background-color: #03030300;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  margin: 30px auto;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+  row-gap: 50px;
+
+}
+
+
+
+.reviewCard{
+  display: flex;
+  background: linear-gradient(225deg, #adb67c, #9f8662);
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: -10px 10px 20px #00000080;
+  transition: 0.3s;
+}
+
+
+.reviewCard:hover{
+  background: linear-gradient(225deg, #c8d489, #be9e71);
+  box-shadow: -10px 10px 10px #00000080;
+
+
+}
+
+
+.reviewCard p{
+  font-size: 20px;
+  color: black;
+  margin: 10px 0;
+  margin: 10px 0;
+  text-shadow: -100px 30px 10px hsla(0, 0%, 0%, 0.5), 0 0 1px black;
+}
+
+.reviewCard img {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px 0 30px 0;
+  margin-bottom: 30px;
+  box-shadow: 6px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.reviewCardContent{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  justify-content: space-between;
+}
+.reviewForm{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.reviewForm textarea{
+  color: white;
+  width: 40%;
+  font-size: 20px;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 10px;
+  background: linear-gradient(45deg,#030312, #032116);
+  box-shadow: -10px 10px 20px #030312, 10px -10px 20px #032116;
+}
+
+textarea::placeholder{
+  color: #ffffff;
+}
+
+.reviewForm button{
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg,rgb(3, 3, 18), rgb(3, 33, 22));
+  padding: 16px 20px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.reviewForm button:hover{
+  background: linear-gradient(45deg,#0a0a3a, #053e2a);
+  transform: scale(1.1);
+  box-shadow: -5px 5px 20px #0a0a3a, 5px -5px 20px #053e2a;
+}
+
+/*PITCH TYPES********************************************************************/
+
+.pitchTypeSection{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pitchTypeCard{
+  border-radius: 10px;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 70%;
+  display: flex;
+
+  justify-content: space-between;
+  box-shadow: 0 0 10px;
+}
+.pitchTypeContent{
+  padding: 30px;
+  width: 70%;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pitchTypeCard button:hover{
+  border-radius: 0px;
+  transform: scale(1.01);
+  background: linear-gradient(45deg, #89a951, #cfbc42);
+  box-shadow: 0 0 10px #cfbc42,0 0 20px #cfbc42;
+}
+
+.pitchTypeCard img{
+  border-radius: 0 10px 10px 0;
+  height: 300px;
+  width: 300px;
+}
+
+/*FEATURE********************************************************************/
+
+.featureSection{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featureCardContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.featureCard{
+  background-color: hsla(0, 0%, 0%, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.featureCard:hover{
+  box-shadow: -10px 10px 20px;
+  background-color: hsla(44, 100%, 75%, 0.4);
+
+}
+.featureCard img{
+  width: 250px;
+  height: 250px;
+  border-radius: 10px 0 0 10px;
+}
+
+
+.featureCardContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  padding: 20px;
+}
+
+.featureCardContent p{
+  color: #20261a;
+}
+
+.featureText p{
+  color: #582F0E;
+  margin-bottom: 20px;
+}
+
+
+/*LOCAL ATTRACTIONS********************************************************************/
+
+
+.localAttractionSection{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.localAttractionCard{
+  width: 80%;
+  background-color: #0425006d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  box-shadow: -10px 10px 20px;
+}
+.localAttractionCard img{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+.localAttractionCard img:hover{
+  transform: scale(1.7) translateX(50px) translateY(-20px);
+  border-radius: 0;
+  box-shadow: -20px 20px 30px;
+}
+
+.localAttractionContent{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+}
+.localAttractionCard a{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.localAttractionCard a:hover{
+  font-size: 20px;
+  color: rgb(74, 69, 0);
+}
+
+
+
+/*SAFETY********************************************************************/
+.safetySection{
+  min-height: 100vh;
+  padding: 30px;
+}
+.safetySection p{
+  font-size: 20px;
+}
+
+/*ACCOUNT********************************************************************/
+
+.accountSection{
+  min-height: 100vh;
+  background: url(images/bg.jpg);
+  display: flex;
+
+  justify-content: center;
+}
+
+.card {
+  padding: 30px;
+  margin-top: 100px;
+  width: 800px;
+  height: 600px;
+  border-radius: 44px;
+  background: lightgrey;
+  background: linear-gradient(-135deg, hsla(0, 0%, 46%, 0.5),hsla(0, 0%, 18%, 0.5), hsla(0, 0%, 8%, 0.5));
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 10px 50px #000000;
+}
+.cardTop{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  align-items: center;
+}
+.bxs-edit{
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.bxs-edit:hover{
+  color: rgb(245, 255, 106);
+}
+.bxs-edit:active{
+  color: rgb(0, 0, 0);
+}
+
+.cardBot{
+  padding: 30px;
+}
+.cardBot button{
+  color: wheat;
+  background: linear-gradient(45deg,#651a34, #5c1320);
+  padding: 16px 20px;
+  border-radius: 20px;
+  margin: 0 10px;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cardBot button:hover{
+  background: linear-gradient(45deg,#3a0a1b, #5c0537);
+  transform: scale(1.1);
+  box-shadow: -5px 5px 20px #651a34, 5px -5px 20px #5c1320;
+}
+.cardBot button:active{
+  background: linear-gradient(45deg,#310000, #190000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SIGNUP********************************************************************/
+.signUpSection{
+  background: url(images/caravan2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  
+}
+.signUpSection nav, .contactSection nav{
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  background-color: rgba(108, 108, 108, 0.1);
+}
+.signUpForm, .loginForm{
+  background-color: rgba(167, 255, 154, 0.1);
+  width: 40%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 100px auto;
+}
+
+.signUpForm input, .loginForm input, .contactForm input, .signUpBtn{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+  background:linear-gradient(90deg,rgb(204, 204, 204),rgb(245, 222, 178));
+  backdrop-filter: blur(10px);
+
+}
+
+.signUpForm button, .loginForm button, .contactForm button{
+  padding: 10px;
+  border-radius: 4px;
+  background:linear-gradient(90deg,rgb(204, 204, 204),rgb(245, 222, 178));
+  cursor: pointer;
+  width: 20%;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.signUpForm button:hover, .loginForm button:hover{
+  background:linear-gradient(90deg,rgb(247, 247, 247),rgb(230, 189, 111));
+  width: 20%;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.loginForm{
+  height: 500px;
+}
+
+
+
+
+/*CONTACT********************************************************************/
+
+
+.contactSection{
+  background: url(images/caravan2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.contactForm{
+  background-color: rgba(167, 255, 154, 0.1);
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 50px;
+  background: hsla(0, 0%, 0%, 0.1);
+  z-index: 0;
+}
+
+.contactForm button{
+  padding: 14px;
+  transition: 0.3;
+  background:linear-gradient(45deg,#ffb8b8, #ffffff);
+}
+.contactForm button:hover{
+  transform: scale(1.1);
+  border-radius: 5px;
+  background:linear-gradient(45deg,#ff8b8b, #ffb4b4);
+  
+}
+.contactForm input, .contactForm textarea{
+  background: linear-gradient(45deg,#ffb8b8, #ffffff);
+  font-size: 16px; 
+  color: #000;
+  width: 60%;
+} 
+.contactForm textarea{
+  padding: 20px;
+  border-radius: 10px;
+}
+.contactForm textarea::placeholder{ 
+  color: #000;
+}
+input:active, button:active, textarea:active{
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.contactForm button{
+  color:#000;
+}
+.contactForm h1{
+  color: #ff5757;
+  text-shadow: 0 0 3px #ffffff,0 0 10px #ffffff,0 0 20px #ffffff,0 0 30px #ffffff,0 0 40px #ffffff,0 0 50px #ffffff;
+}
+
+.aboutText{
+  padding-top: 20px;
+}
+.aboutText p{
+  color:white;
+  text-shadow: 0 0 1px #000,0 0 2px #000, 0 0 3px #000,0 0 4px #000,0 0 5px #000;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 6px;
+}
+
+
+
+
+/*FOOTER********************************************************************/
+
+footer{
+  background-color: #353535;  
+  padding: 20px;
+}
+
+footer .footerH{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footerH div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerP{
+  width: 60%;
+}
+
+.footerB{
+  padding: 20px;
+  border-top: 2px dashed #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.footerB div a{
+  font-size: 20px;
+  margin: 10px;
+}
+
+
+
+/*RESPONSIVE*********************************************
+**********************************************************
+***********************************************************/
+
+
+/* Large Devices (<= 1440px) */
+@media (max-width: 1440px) {
+  
+
+
+  .intro{
+    margin: 16px;
+    margin-top: 0px;
+  }
+  
+  .intro p{
+    margin: 20px;
+    font-size: 18px;
+  }
+  
+  /*HOME***********************************************************************/
+  .navLinks a {
+    margin: auto 12px;
+  }
+
+  .homeSection h1{
+    margin-top: 200px;
+    font-size: 35px;
+  }
+  
+  .resvForm{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 120px;
+    margin-bottom: 20px;
+  }
+
+  .resvForm input{
+
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  .resvForm button{
+    font-size: 20px;
+  }
+  .homeCard{
+    background-color: #382b1d00;
+    max-width: 80%;
+  }
+
+  .mySlides img {
+    max-height: 400px;
+  }
+  .slideshow-container {
+    max-height: 400px;
+  }
+ 
+  /*INFO***********************************************************************/
+
+  .infoCard{
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: -8px 8px 16px black;
+  }
+
+  .infoCard img:hover{
+    transform: scale(1.5) translate(30px,-30px);
+  }
+
+  .infoCardContent{
+    width: 75%;
+    padding: 10px;
+
+  }
+
+  .btn-info{
+    padding: 8px 50px;
+    font-size: 14px;
+  }
+
+
+  /*REVIEW*********************************************************************/
+
+  .reviewCardContainer{
+    width: 96%;
+    box-shadow: 0 0 8px black;
+    margin: 20px auto;
+    padding: 20px;
+    row-gap: 30px;
+  }
+
+  .reviewCard{
+    width: 46%;
+  }
+
+  .reviewCard p{
+    font-size: 18px;
+    color: black;
+    margin: 10px 0;
+    text-shadow: -100px 30px 8px hsla(0, 0%, 0%, 0.5),0 0 1px rgb(0, 0, 0);
+  }
+
+  .reviewCardContent{
+    margin: 20px;
+  }
+    
+  .reviewCard img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .reviewForm{
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+  }
+
+  textarea{
+    width: 70%;
+  }
+
+  .reviewForm button{
+    box-shadow: -5px 5px 30px hsla(240, 71%, 13%, 0.5), 5px -5px 30px hsla(159, 85%, 13%, 0.5);
+  }
+
+
+    
+  /*PITCH TYPES********************************************************************/
+
+  .pitchTypeCard{
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  .pitchTypeContent{
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .pitchTypeCard img{
+    height: 230px;
+    width: 230px;
+  }
+
+  /*FEATURE********************************************************************/
+
+  .featureSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .featureCard{
+    width: 46%;
+    margin-bottom: 30px;
+  }
+
+  .featureCard img{
+    width: 200px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .featureCardContent{
+    padding: 20px;
+  }
+
+  .featureCardContent p{
+    font-size: 16px;
+  }
+
+
+  /*LOCAL ATTRACTIONS********************************************************************/
+
+
+  .localAttractionCard{
+    width: 90%;
+  }
+
+  .localAttractionCard img{
+    width: 300px;
+    height: 270px;
+  }
+
+  .localAttractionCard img:hover{
+    transform: scale(1.5) translateX(50px) translateY(-20px);
+  }
+
+  .safetySection p{
+    font-size: 18px;
+  }
+  
+  /*ACCOUNT********************************************************************/
+  
+  .card {
+    margin-top: 50px;
+    width: 800px;
+    height: 500px;
+  }
+
+  .cardTop img{
+    height: 150px;
+    width: 150px;
+  }
+
+  /*SIGNUP********************************************************************/
+  
+  
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+    margin: 30px auto;
+  }
+    
+    /*CONTACT********************************************************************/
+    
+  .contactForm{
+    width: 70%;
+    height: 350px;
+    padding: 20px;
+  }
+
+  .contactForm button{
+    padding: 10px;
+    background:linear-gradient(45deg,#ffb8b8, #ffffff);
+  }
+
+  .contactForm button:hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+    background:linear-gradient(45deg,#ff8b8b, #ffb4b4);
+  }
+
+  .contactForm input, .contactForm textarea{
+    width: 70%;
+    background: linear-gradient(45deg,#ffb8b8, #ffffff);
+  } 
+
+  .contactForm button{
+    color:#000;
+  }
+  .contactForm h1{
+    font-size: 30px;
+    color: #ff5757;
+    text-shadow: 0 0 3px #ffffff,0 0 10px #ffffff,0 0 20px #ffffff,0 0 30px #ffffff,0 0 40px #ffffff,0 0 50px #ffffff;
+  }
+  .aboutText p{
+    font-size: 16px;
+    color:white;
+    text-shadow: 0 0 1px #000,0 0 2px #000, 0 0 3px #000,0 0 4px #000,0 0 5px #000;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    padding: 6px;
+  }
+
+
+}
+
+/* Medium Devices (<= 1024px) */
+  @media (max-width: 1024px) {
+    
+    
+    /* Navbar */
+  nav {
+    height: 70px;
+  }
+
+  .logoDiv img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navLinks a {
+    font-size: 13px;
+    margin: auto 12px;
+  }
+
+  /*HOME***********************************************************************/
+
+  .homeSection h1{
+    margin-top: 100px;
+    font-size: 30px;
+  }
+
+  .resvForm{
+    margin: 0 auto;
+    width: 94%;
+    margin-top: 120px;
+    margin-bottom: 20px;
+  }
+  .resvDate label{
+    font-size: 12px;
+  }
+
+  .resvForm input{
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .resvForm button{
+    font-size: 18px;
+    padding: 0px 16px;
+  }
+
+  .homeCard p{
+    font-size: 16px;
+  }
+
+
+  .mySlides img {
+    max-height: 320px;
+  }
+  .slideshow-container {
+    max-height: 320px;
+  }
+
+  /*INFO***********************************************************************/
+  .infoSection, .pitchTypeSection, .featureSection, .localAttractionSection{
+    padding: 10px;
+  }
+  .intro h1 {
+    font-size: 28px;
+  }
+  .infoSection h2, .reviewSection h2, .pitchTypeSection h2, .featureSection h2, .localAttractionSection h2{
+    font-size: 20px;
+  }
+  .infoSection p, .reviewSection p, .pitchTypeSection p, .featureSection p, .localAttractionSection p{
+    font-size: 15px;
+  }
+  .infoCard{
+    height: 170px;
+    margin: 16px;
+    border-radius: 14px;
+    box-shadow: -8px 8px 16px black;
+  }
+  .infoCard img{
+    border-radius: 14px 0 0 14px;
+  }
+  .infoCard img:hover{
+    transform: scale(1.5) translate(20px,-20px);
+  }
+  .infoCardContent{
+    width: 80%;
+    padding: 14px;
+
+  }
+
+  .btn-info{
+    padding: 4px 30px;
+    font-size: 13px;
+  }
+
+
+  /*REVIEW*********************************************************************/
+
+  .reviewCardContainer{
+    width: 98%;
+    box-shadow: 0 0 8px black;
+    margin: 10px auto;
+    padding: 16px;
+    row-gap: 24px;
+  }
+
+  .reviewCard{
+    width: 46%;
+  }
+
+  .reviewCard p{
+    font-size: 14px;
+    color: black;
+    margin: 10px 0;
+    text-shadow: -70px 30px 8px hsla(0, 0%, 0%, 0.4),0 0 1px rgb(0, 0, 0);
+  }
+
+  .reviewCardContent{
+    margin: 16px;
+  }
+    
+  .reviewCard img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .reviewForm{
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+  }
+
+  .reviewForm textarea{
+    font-size: 15px;
+    width: 70%;
+    padding: 6px 10px;
+    box-shadow: -5px 5px 20px hsla(240, 71%, 13%, 0.8), 5px -5px 20px hsla(159, 85%, 13%, 0.8);
+
+  }
+
+  .reviewForm button{
+    font-size: 11px;
+    box-shadow: -5px 5px 30px hsla(240, 71%, 13%, 0.5), 5px -5px 30px hsla(159, 85%, 13%, 0.5);
+  }
+
+
+    
+  /*PITCH TYPES********************************************************************/
+
+  .pitchTypeCard{
+    margin-bottom: 16px;
+    width: 96%;
+  }
+
+  .pitchTypeContent{
+    padding: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .pitchTypeCard img{
+    height: 190px;
+    width: 190px;
+  }
+
+  /*FEATURE********************************************************************/
+
+  .featureCardContainer{
+    width: 108%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+  }
+  
+
+  .featureCard{
+    width: 46%;
+    margin-bottom: 16px;
+  }
+
+  .featureCard img{
+    width: 120px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .featureCardContent{
+    padding: 10px;
+  }
+
+  .featureCardContent p{
+    font-size: 14px;
+  }
+
+
+  /*LOCAL ATTRACTIONS********************************************************************/
+
+
+  .localAttractionCard{
+    width: 96%;
+  }
+
+  .localAttractionCard img{
+    width: 200px;
+    height: 180px;
+  }
+
+  .localAttractionCard img:hover{
+    transform: scale(1.5) translateX(32px) translateY(-10px);
+  }
+
+  .localAttractionCard p a{
+    font-size: 14px;
+  }
+  .safetySection p{
+    font-size: 15px;
+  }
+
+  /*ACCOUNT********************************************************************/
+  .bxs-edit{
+    font-size: 14px;
+  }
+  .card {
+    margin-top: 50px;
+    width: 600px;
+    height: 400px;
+  }
+
+  .cardTop img{
+    height: 120px;
+    width: 120px;
+  }
+
+  .cardBot p{
+    font-size: 14px;
+  }
+
+  .cardBot button{
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  /*SIGNUP********************************************************************/
+
+
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 80%;
+    height: 450px;
+    padding: 10px;
+    margin: 30px auto;
+  }
+  .loginForm{
+    width: 80%;
+    height: 300px;
+    margin: 60px auto;
+
+  }
+  .signUpForm input, .loginForm input, .signUpForm p, .loginForm p, .signUpForm button, .loginForm button{
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+
+    /*CONTACT********************************************************************/
+    
+  .contactForm{
+    width: 96%;
+    height: 320px;
+    padding: 20px;
+  }
+  .contactForm h1{
+    font-size: 26px;
+  }
+
+  .contactForm button{
+    padding: 8px;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 80%;
+    padding: 6px 10px;
+    font-size: 15px;
+  } 
+  
+  .aboutText p, .contactForm p{
+    font-size: 15px;
+    margin: 0;
+    
+  }
+        
+}
+
+/* Small Devices (<= 768px) */
+@media (max-width: 768px) {
+  .homeSection h1{
+    margin-top: 100px;
+    font-size: 24px;
+  }
+
+  .navLinks{
+    display: none;
+  }
+
+
+}
+
+/* Extra Small Devices (<= 425px) */
+@media (max-width: 425px) {
+  h1{
+    color: #0800ff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#check{
+  display: none;
+}
+
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .icons{
+      display: inline-flex;
+      z-index: 3;
+  }
+  #check:checked~.icons #menu-icon{
+      display: none;
+  }
+  .icons #close-icon{
+      display: none;
+  }
+  #check:checked~.icons #close-icon{
+      display: block;
+  }
+  .navbar{
+      position: absolute;
+      top: 0%;
+      right: 0;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.595),rgba(59, 55, 0, 0));
+      overflow: hidden;
+      transition: 0.3s ease;
+      display: flex; /* Add this line */
+      flex-direction: column; /* Add this line */
+      align-items: center; /* Add this line */
+      animation: myBoxShadow 4s infinite;
+      padding-top: 70px;
+  }
+  #check:checked~.navbar{
+      height: 100vh;
+  }
+  .navbar a{
+    
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+      width: 250px;
+      display: block;
+      font-size: 1rem;
+      margin: 0.7rem 0;
+      transform: translateY(-30px);
+      opacity: 0;
+      transition: 0.3s ease;
+      background-color: hsla(0, 0%, 0%, 0.95);
+      padding: 6px 50px;
+      border-radius: 5px;
+      text-align: center;
+  }
+  #check:checked~.navbar a{
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.15s * var(--i));
+  }
+}
+
+
+
+
